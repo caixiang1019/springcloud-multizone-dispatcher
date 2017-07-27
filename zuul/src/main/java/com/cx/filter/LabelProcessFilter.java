@@ -45,7 +45,6 @@ public class LabelProcessFilter extends ZuulFilter {
         String token = ctx.getRequest().getHeader(HttpHeaders.AUTHORIZATION);
 
         String labels = TOKEN_LABEL_MAP.get(token);
-        String t = Thread.currentThread().getName();
         logger.info("label: " + labels);
 
         // zuul初始化label
